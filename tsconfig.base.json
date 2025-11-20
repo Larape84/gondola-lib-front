@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@gondola-librery-front/shared-ui-components-v16": [
+        "libs/ui/v16/src/index.ts"
+      ],
+      "@gondola-librery-front/shared-ui-components-v17": [
+        "libs/ui/v17/src/index.ts"
+      ],
+      "@gondola-librery-front/shared-ui-components-v18": [
+        "libs/ui/v18/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

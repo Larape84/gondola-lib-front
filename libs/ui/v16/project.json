@@ -1,0 +1,26 @@
+{
+  "name": "shared-ui-components-v16",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/v16/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["type:ui", "scope:shared", "version:v16"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "tsConfig": "{projectRoot}/tsconfig.lib.json",
+        "project": "{projectRoot}/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "{projectRoot}/tsconfig.lib.prod.json"
+        }
+      }
+    }
+  }
+}
