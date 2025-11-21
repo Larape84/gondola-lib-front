@@ -1,0 +1,22 @@
+{
+  "name": "@gondola-librery-front/shared-ui-components-v20",
+  "version": "1.0.0",
+  "description": "Shared UI Components for Angular 20",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/your-repo"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "~20.3.0",
+    "@angular/core": "~20.3.0",
+    "rxjs": "~7.8.0"
+  },
+  "keywords": [
+    "angular",
+    "ui",
+    "components",
+    "shared",
+    "library"
+  ]
+}
