@@ -13,7 +13,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/bitbucket-pipelines.yml"]
   },
-  "nxCloudId": "691c8a767dcb6349a59b5b5b",
+
   "targetDefaults": {
     "@angular-devkit/build-angular:browser": {
       "cache": true,
@@ -53,5 +53,33 @@
     "@nx/angular:component": {
       "style": "css"
     }
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "libs"
+  },
+  "externalNodes": {
+    "constraints": [
+      {
+        "sourceTag": "version:16",
+        "onlyDependOnLibsWithTags": ["version:16"]
+      },
+      {
+        "sourceTag": "version:17",
+        "onlyDependOnLibsWithTags": ["version:17"]
+      },
+      {
+        "sourceTag": "version:18",
+        "onlyDependOnLibsWithTags": ["version:18"]
+      },
+      {
+        "sourceTag": "version:19",
+        "onlyDependOnLibsWithTags": ["version:19"]
+      },
+      {
+        "sourceTag": "version:20",
+        "onlyDependOnLibsWithTags": ["version:20"]
+      }
+    ]
   }
 }

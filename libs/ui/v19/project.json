@@ -1,10 +1,10 @@
 {
-  "name": "shared-ui-components-v17",
+  "name": "shared-ui-components-v19",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/ui/v17/src",
+  "sourceRoot": "libs/ui/v19/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": ["type:ui", "scope:shared", "version:v17"],
+  "tags": ["type:ui", "scope:shared", "version:v19"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint"

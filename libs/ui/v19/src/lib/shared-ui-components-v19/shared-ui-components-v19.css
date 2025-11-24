@@ -1,0 +1,18 @@
+.shared-ui-v19-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.shared-ui-v19-container h1 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.shared-ui-v19-container p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}

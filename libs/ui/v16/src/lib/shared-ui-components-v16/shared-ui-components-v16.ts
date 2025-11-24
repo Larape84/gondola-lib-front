@@ -1,9 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng-v16/button';
+import { CalendarModule } from 'primeng-v16/calendar';
 
 @Component({
   selector: 'lib-shared-ui-components-v16',
-  imports: [],
   templateUrl: './shared-ui-components-v16.html',
-  styleUrl: './shared-ui-components-v16.css',
+  styleUrls: ['./shared-ui-components-v16.css'],
+  imports: [ButtonModule, CalendarModule, FormsModule],
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
-export class SharedUiComponentsV16 {}
+export class SharedUiComponentsV16 {
+  date: Date | undefined;
+  @ViewChild('container') container: ElementRef | undefined;
+}

@@ -23,6 +23,12 @@
       ],
       "@gondola-librery-front/shared-ui-components-v18": [
         "libs/ui/v18/src/index.ts"
+      ],
+      "@gondola-librery-front/shared-ui-components-v19": [
+        "libs/ui/v19/src/index.ts"
+      ],
+      "@gondola-librery-front/shared-ui-components-v20": [
+        "libs/ui/v20/src/index.ts"
       ]
     }
   },

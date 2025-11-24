@@ -8,11 +8,7 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "preserve",
-    "paths": {
-      "primeng": ["primeng-v16"],
-      "primeng/*": ["primeng-v16/*"]
-    }
+    "module": "preserve"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
