@@ -8,9 +8,9 @@ import { CalendarModule } from 'primeng-v16/calendar';
   templateUrl: './shared-ui-components-v16.html',
   styleUrls: ['./shared-ui-components-v16.css'],
   imports: [ButtonModule, CalendarModule, FormsModule],
-  encapsulation: ViewEncapsulation.ShadowDom,
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class SharedUiComponentsV16 {
   date: Date | undefined;
-  @ViewChild('container') container: ElementRef | undefined;
+  
 }

@@ -2,9 +2,9 @@
   "name": "@gondola-librery-front/shared-ui-components-v18",
   "version": "1.0.0",
   "description": "Shared UI Components for Angular 18",
-  "repository": {
+   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/your-repo"
+    "url": "https://github.com/Larape84/gondola-lib-front"
   },
   "license": "MIT",
   "peerDependencies": {
@@ -17,7 +17,7 @@
     "primeicons": "^7.0.0"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "keywords": [
     "angular",

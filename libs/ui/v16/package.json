@@ -1,10 +1,10 @@
 {
-  "name": "@gondola-librery-front/shared-ui-components-v16",
+  "name": "@larape84/shared-ui-components-v16",
   "version": "1.0.0",
   "description": "Shared UI Components for Angular 16",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/your-repo"
+    "url": "https://github.com/Larape84/gondola-lib-front"
   },
   "license": "MIT",
   "peerDependencies": {
@@ -17,7 +17,7 @@
     "primeicons": "^6.0.1"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "keywords": [
     "angular",
