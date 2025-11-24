@@ -1,8 +1,8 @@
 {
-  "name": "@gondola-librery-front/shared-ui-components-v17",
-  "version": "1.0.0",
+  "name": "@larape84/shared-ui-components-v17",
+  "version": "1.0.5",
   "description": "Shared UI Components for Angular 17",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/Larape84/gondola-lib-front"
   },
@@ -13,7 +13,7 @@
     "rxjs": "^7.0.0"
   },
   "dependencies": {
-    "primeng": "^17.18.11",
+    "primeng": "^17.18.15",
     "primeicons": "^7.0.0"
   },
   "publishConfig": {
@@ -27,4 +27,3 @@
     "library"
   ]
 }
-

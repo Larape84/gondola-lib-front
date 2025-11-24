@@ -1,6 +1,6 @@
 {
   "name": "@larape84/shared-ui-components-v16",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Shared UI Components for Angular 16",
   "repository": {
     "type": "git",
@@ -27,4 +27,3 @@
     "library"
   ]
 }
-

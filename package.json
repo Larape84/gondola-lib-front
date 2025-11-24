@@ -8,18 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:libs": "nx run-many --target=build --projects=shared-ui-components-v16,shared-ui-components-v17,shared-ui-components-v18,shared-ui-components-v19,shared-ui-components-v20 --configuration=production",
-    "build:lib:v16": "nx build shared-ui-components-v16 --configuration=production",
-    "build:lib:v17": "nx build shared-ui-components-v17 --configuration=production",
-    "build:lib:v18": "nx build shared-ui-components-v18 --configuration=production",
-    "build:lib:v19": "nx build shared-ui-components-v19 --configuration=production",
-    "build:lib:v20": "nx build shared-ui-components-v20 --configuration=production",
-    "publish:v16": "cd libs/ui/v16/dist && npm publish",
-    "publish:v17": "cd libs/ui/v17/dist && npm publish",
-    "publish:v18": "cd libs/ui/v18/dist && npm publish",
-    "publish:v19": "cd libs/ui/v19/dist && npm publish",
-    "publish:v20": "cd libs/ui/v20/dist && npm publish",
-    "publish:all": "npm run build:libs && npm run publish:v16 && npm run publish:v17 && npm run publish:v18 && npm run publish:v19 && npm run publish:v20"
+    "publish:all": "node publish-all.js"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +23,9 @@
     "primeicons": "^7.0.0",
     "primeng": "^20.0.0",
     "primeng-v16": "npm:primeng@^16.9.1",
+    "primeng-v17": "npm:primeng@^17.18.15",
+    "primeng-v18": "npm:primeng@^18.0.2",
+    "primeng-v19": "npm:primeng@^19.1.4",
     "rxjs": "~7.8.0",
     "zone.js": "~0.15.0"
   },

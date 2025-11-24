@@ -4,6 +4,9 @@
 @import 'primeng-v16/resources/themes/lara-light-blue/theme.css';
 @import 'primeng-v16/resources/primeng.min.css';
 
+@import 'primeng-v17/resources/themes/lara-light-blue/theme.css';
+@import 'primeng-v17/resources/primeng.css';
+
 /* 
   Note: PrimeNG v20 uses a new theming system (@primeuix/themes) 
   and doesn't require CSS imports. Styles are applied via provideAnimations()
