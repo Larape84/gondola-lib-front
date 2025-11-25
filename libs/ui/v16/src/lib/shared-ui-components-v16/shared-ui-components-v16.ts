@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng-v16/button';
 import { CalendarModule } from 'primeng-v16/calendar';
@@ -12,5 +12,4 @@ import { CalendarModule } from 'primeng-v16/calendar';
 })
 export class SharedUiComponentsV16 {
   date: Date | undefined;
-  
 }

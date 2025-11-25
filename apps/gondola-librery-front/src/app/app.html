@@ -1,7 +1,33 @@
-<p>Aplicación cargada</p>
+<div class="w-full flex flex-col p-2 gap-3">
+  <div
+    class="py-6 border items-center border-gray-400 flex gap-2 px-4 rounded-md"
+  >
+    <i class="pi pi-info-circle text-gray-500 text-2xl"></i>
+    <div class="flex flex-col">
+      <span class="text-2xl text-gray-600">Gondola Libreria</span>
+      <span class="text-gray-500"
+        >Monorepo de los componentes de interfaz para cada version de
+        angular</span
+      >
+    </div>
+  </div>
 
-<lib-shared-ui-components-v16></lib-shared-ui-components-v16>
+  <div class="w-full flex gap-3">
+    @for(item of angularVersion; track $index){
 
-<lib-shared-ui-components-v17></lib-shared-ui-components-v17>
+    <div
+      class="rounded-full cursor-pointer bg-gray-100 border border-gray-200 px-3 py-1"
+    >
+      <span class="text-gray-700">{{item}}</span>
+    </div>
 
-<lib-shared-ui-components-v20></lib-shared-ui-components-v20>
+    }
+  </div>
+
+  <div class="flex flex-row gap-3">
+    <div class="w-[300px] border p-2 border-gray-200 rounded-md">
+      <span class="text-gray-600">Componetes : </span>
+      <hr class="w-full text-gray-500 my-0" />
+    </div>
+  </div>
+</div>

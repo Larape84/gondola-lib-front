@@ -8,12 +8,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/gondola-librery-front",
         "index": "apps/gondola-librery-front/src/index.html",
         "main": "apps/gondola-librery-front/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/gondola-librery-front/tsconfig.app.json",
         "assets": [
           {
@@ -21,7 +25,9 @@
             "input": "apps/gondola-librery-front/public"
           }
         ],
-        "styles": ["apps/gondola-librery-front/src/styles.css"]
+        "styles": [
+          "apps/gondola-librery-front/src/styles.css"
+        ]
       },
       "configurations": {
         "production": {

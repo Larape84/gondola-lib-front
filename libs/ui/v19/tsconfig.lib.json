@@ -8,7 +8,11 @@
     "types": [],
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
-    "target": "es2020"
+    "target": "es2020",
+    "paths": {
+      "primeng/*": ["node_modules/primeng-v19/*"],
+      "primeng/api": ["node_modules/primeng-v19/api"]
+    }
   },
   "exclude": ["src/**/*.spec.ts", "jest.config.ts", "src/**/*.test.ts"],
   "include": ["src/**/*.ts"]

@@ -13,6 +13,8 @@ const LIBS = [
   { name: 'shared-ui-components-v20', dir: 'libs/ui/v20' },
 ];
 
+const currentVersion = '1.0.6';
+
 // CONTROL DEL TIPO DE INCREMENTO
 // ------------------------------------------
 // Opciones: "patch", "minor", "major"
@@ -50,7 +52,6 @@ function updateLibVersion(lib) {
   const pkgPath = path.join(lib.dir, 'package.json');
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
 
-  const currentVersion = '1.0.4';
   const newVersion = bumpVersion(currentVersion, VERSION_BUMP_TYPE);
 
   pkg.version = newVersion;

@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedUiComponentsV16 } from '@gondola-librery-front/shared-ui-components-v16';
 import { SharedUiComponentsV20 } from '@gondola-librery-front/shared-ui-components-v20';
-import { SharedUiComponentsV17 } from '../../../../libs/ui/v17/src/lib/shared-ui-components-v17/shared-ui-components-v17';
+import { SharedUiComponentsV17 } from '@gondola-librery-front/shared-ui-components-v17';
+import { componentesV16 } from './componentes-v16';
 @Component({
   imports: [
     RouterModule,
@@ -17,4 +18,12 @@ import { SharedUiComponentsV17 } from '../../../../libs/ui/v17/src/lib/shared-ui
 })
 export class App {
   protected title = 'gondola-librery-front';
+  public componentesV16 = componentesV16;
+  public angularVersion = [
+    'Angular 16',
+    'Angular 17',
+    'Angular 18',
+    'Angular 19',
+    'Angular 20',
+  ];
 }

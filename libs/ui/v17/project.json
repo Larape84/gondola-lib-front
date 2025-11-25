@@ -14,7 +14,7 @@
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "tsConfig": "{projectRoot}/tsconfig.lib.json",
-        "project": "{projectRoot}/ng-package.json",
+        "project": "{projectRoot}/ng-package.json"
       },
       "configurations": {
         "production": {
