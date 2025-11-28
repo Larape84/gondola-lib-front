@@ -1,0 +1,29 @@
+<div class="gondola-inputnumber">
+  @if (floatLabel()) {
+  <p-floatLabel>
+    <ng-container *ngTemplateOutlet="inputnumber"></ng-container>
+    <label for="{{ placeholder() }}">{{ placeholder() }}</label>
+  </p-floatLabel>
+  }@else{
+  <ng-container *ngTemplateOutlet="inputnumber"></ng-container>
+  }
+</div>
+
+<ng-template #inputnumber>
+  <p-inputNumber
+    [(ngModel)]="numberValue"
+    [disabled]="disabled()"
+    [readonly]="readOnly()"
+    [inputId]="inputId()"
+    [mode]="mode()"
+    [currency]="currency()"
+    [locale]="locale()"
+    [prefix]="prefix()"
+    [suffix]="suffix()"
+    [min]="min()"
+    [max]="max()"
+    [minFractionDigits]="minDecimal()"
+    [maxFractionDigits]="maxDecimal()"
+    (ngModelChange)="changeEmit()"
+  />
+</ng-template>

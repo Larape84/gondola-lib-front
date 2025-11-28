@@ -1,0 +1,24 @@
+<div class="gondola-calendar">
+  @if (isRange()) {
+  <p-datepicker
+    [(ngModel)]="rangeDates"
+    selectionMode="range"
+    [readonlyInput]="true"
+    [maxDate]="maxDate()"
+    [minDate]="minDate()"
+    [placeholder]="placeholder()"
+    (ngModelChange)="onValueChange($event)"
+
+  />
+  }@else {
+  <p-datepicker
+    [(ngModel)]="currentDate"
+    [placeholder]="placeholder()"
+    [showTime]="showTime()"
+    [hourFormat]="formatHour()"
+    [maxDate]="maxDate()"
+    [minDate]="minDate()"
+    (ngModelChange)="onValueChange($event)"
+  />
+  }
+</div>

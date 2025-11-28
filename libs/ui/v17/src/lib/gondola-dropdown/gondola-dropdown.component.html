@@ -1,0 +1,67 @@
+<div class="gondola-dropdown">
+  @if (floatLabel()) {
+    <p-floatLabel>
+      <ng-container *ngTemplateOutlet="drop"></ng-container>
+      <label for="{{ placeholder() }}">{{ placeholder() }}</label>
+    </p-floatLabel>
+  } @else {
+    <ng-container *ngTemplateOutlet="drop"></ng-container>
+  }
+</div>
+
+<ng-template #drop>
+  <p-dropdown
+    [options]="optionList()"
+    [disabled]="disabled()"
+    [virtualScroll]="virtualScroll()"
+    [virtualScrollItemSize]="virtualScrollItemSize()"
+    [appendTo]="appendTo()"
+    [(ngModel)]="optionSelect"
+    [optionLabel]="optionLabel()"
+    [placeholder]="floatLabel() ? undefined : placeholder()"
+    [filter]="filter()"
+    [filterBy]="filterBy()"
+    [showClear]="showClear()"
+    panelStyleClass="gondola-dropdown"
+  >
+    @if (selectItemCustom) {
+      <ng-template #selectedItem let-selectedOption>
+        <ng-container
+          *ngTemplateOutlet="
+            selectItemCustom;
+            context: { $implicit: selectedOption }
+          "
+        ></ng-container>
+      </ng-template>
+    }
+    @if (itemListCustom) {
+      <ng-template let-itemList #item>
+        <ng-container
+          *ngTemplateOutlet="itemListCustom; context: { $implicit: itemList }"
+        ></ng-container>
+      </ng-template>
+    }
+    @if (itemListCustom) {
+      <ng-template let-itemList #item>
+        <ng-container
+          *ngTemplateOutlet="itemListCustom; context: { $implicit: itemList }"
+        ></ng-container>
+      </ng-template>
+    }
+    @if (dropIconCustom) {
+      <ng-template #dropdownicon>
+        <ng-container *ngTemplateOutlet="dropIconCustom"></ng-container>
+      </ng-template>
+    }
+    @if (headerCustom) {
+      <ng-template #header>
+        <ng-container *ngTemplateOutlet="headerCustom"></ng-container>
+      </ng-template>
+    }
+    @if (footerCustom) {
+      <ng-template #footer>
+        <ng-container *ngTemplateOutlet="footerCustom"></ng-container>
+      </ng-template>
+    }
+  </p-dropdown>
+</ng-template>

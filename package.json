@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npx nx run gondola-librery-front:serve:development",
+    "start": "node build-all.js && npx nx run gondola-librery-front:serve:development",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

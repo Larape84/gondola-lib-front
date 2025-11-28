@@ -1,0 +1,11 @@
+<div class="gondola-textarea">
+  <textarea
+    [rows]="rows"
+    [cols]="cols"
+    [placeholder]="placeholder"
+    [autoResize]="true"
+    pTextarea
+    [(ngModel)]="value"
+    (input)="onInput($event)"
+  ></textarea>
+</div>

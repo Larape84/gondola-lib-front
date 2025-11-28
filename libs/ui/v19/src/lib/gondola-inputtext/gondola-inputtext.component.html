@@ -1,0 +1,13 @@
+<div class="gondola-inputtext">
+  <input
+    type="text"
+    pInputText
+    [placeholder]="placeholder()"
+    [disabled]="disabled"
+    [readOnly]="readOnly()"
+    [(ngModel)]="value"
+    (click)="clickEmit()"
+
+    (input)="onValueChange()"
+  />
+</div>

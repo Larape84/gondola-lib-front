@@ -1,0 +1,24 @@
+@if (show) {
+   <div class="gondola-button">
+      <button
+         [disabled]="disabled"
+         [ngStyle]="customStyle"
+         [style]="{
+            cursor: disabled ? 'not-allowed' : 'pointer',
+            background: currentBackgroundColor,
+            color: currentLetterColor,
+            'border-radius': borderRadius,
+         }"
+         (click)="selectedEvent()"
+         pButton>
+         @if (custonElements) {
+            <ng-container *ngTemplateOutlet="custonElements"></ng-container>
+         } @else {
+            @if (!!icon) {
+               <i [class]="icon" style="margin-right: 10px"></i>
+            }
+            {{ label }}
+         }
+      </button>
+   </div>
+}

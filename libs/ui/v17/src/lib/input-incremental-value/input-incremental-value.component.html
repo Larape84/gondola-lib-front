@@ -1,0 +1,47 @@
+<div class="input-incremental-container">
+  <section class="decremental-button">
+    <button
+      [disabled]="onlyNaturalNumbers() ? verifyDisabledDecremental() : false"
+      (click)="decrementalEmit()"
+      pButton
+    >
+      <app-custom-icons
+        [name]="'minus-icon'"
+        [color]="'black'"
+        [width]="'9px'"
+        [height]="'9px'"
+      />
+    </button>
+  </section>
+
+  <section class="input-content">
+    <article class="input-value-card">
+      <p-inputNumber
+        [(ngModel)]="numberValue"
+        [disabled]="disabled()"
+        [readonly]="readOnly()"
+        [inputId]="inputId()"
+        [mode]="mode()"
+        [currency]="currency()"
+        [locale]="locale()"
+        [prefix]="prefix()"
+        [suffix]="suffix()"
+        [min]="min()"
+        [max]="max()"
+        [minFractionDigits]="minDecimal()"
+        [maxFractionDigits]="maxDecimal()"
+        (ngModelChange)="changeEmit()"
+      />
+    </article>
+  </section>
+
+  <section class="incremental-button">
+    <button
+      [disabled]="verifyDisabledIncremental()"
+      (click)="incrementalEmit()"
+      pButton
+    >
+      <app-custom-icons [name]="'plus-rectangle-icon'" [color]="'black'" />
+    </button>
+  </section>
+</div>

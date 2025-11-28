@@ -1,0 +1,21 @@
+<div class="gondola-textarea">
+  @if (floatLabel()) {
+  <p-floatLabel>
+    <ng-container *ngTemplateOutlet="textarea"></ng-container>
+    <label for="{{ placeholder() }}">{{ placeholder() }}</label>
+  </p-floatLabel>
+  }@else{
+  <ng-container *ngTemplateOutlet="textarea"></ng-container>
+  }
+</div>
+
+<ng-template #textarea>
+  <textarea
+    pInputTextarea
+    [rows]="rows()"
+    [cols]="cols()"
+    [placeholder]="placeholder()"
+    [autoResize]="true"
+    [(ngModel)]="textValue"
+  ></textarea>
+</ng-template>

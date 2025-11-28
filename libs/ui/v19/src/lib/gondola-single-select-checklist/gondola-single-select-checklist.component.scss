@@ -1,0 +1,46 @@
+input {
+  border: 2px solid #fff;
+  background: #fff;
+  width: 22px;
+  height: 22px;
+  color: #495057;
+  border-radius: 30%;
+
+  box-shadow: 3px 3px 7px 0px #9c9c9c7a inset, -3px -3px 7px 0px #ffffff inset;
+
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+  box-shadow 0.2s;
+}
+.borde{
+
+    background: linear-gradient(
+        130.18deg,
+        #ffffff 35.92%,
+        rgba(55, 83, 111, 0.4) 190.57%
+    );
+    border-radius: 5px;
+  width: fit-content;
+}
+
+.horizontal {
+  display: flex;
+  gap: 1rem;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+label{
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}

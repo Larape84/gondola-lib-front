@@ -1,0 +1,41 @@
+<div class="gondola-calendar">
+  @if (floatLabel()) {
+    <p-floatLabel>
+      <ng-container *ngTemplateOutlet="calendar"></ng-container>
+      <label for="{{ placeholder() }}">{{ placeholder() }}</label>
+    </p-floatLabel>
+  } @else {
+    <ng-container *ngTemplateOutlet="calendar"></ng-container>
+  }
+</div>
+
+<ng-template #calendar>
+  @if (isRange()) {
+    <p-calendar
+      [(ngModel)]="rangeDates"
+      [showClear]="
+        rangeDates() && rangeDates().length > 0 ? showClear() : false
+      "
+      selectionMode="range"
+      [readonlyInput]="readonlyInput()"
+      [appendTo]="appendTo()"
+      [maxDate]="maxDate()"
+      [minDate]="minDate()"
+      [placeholder]="placeholder()"
+      [disabled]="disabled()"
+    />
+  } @else {
+    <p-calendar
+      [(ngModel)]="currentDate"
+      [showClear]="showClear()"
+      [readonlyInput]="readonlyInput()"
+      [placeholder]="placeholder()"
+      [appendTo]="appendTo()"
+      [showTime]="showTime()"
+      [hourFormat]="formatHour()"
+      [maxDate]="maxDate()"
+      [minDate]="minDate()"
+      [disabled]="disabled()"
+    />
+  }
+</ng-template>

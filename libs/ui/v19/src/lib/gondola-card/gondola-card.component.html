@@ -1,0 +1,18 @@
+<div class="card-main-container">
+  <div class="card-form">
+    <section class="card-title">
+      {{title()}}
+    </section>
+    <section class="card-inputs">
+      @if(content){
+        <ng-container [ngTemplateOutlet]="content"></ng-container>
+      }
+    </section>
+    <article class="partner-submit-button">
+      @if(footer){
+        <ng-container [ngTemplateOutlet]="footer"></ng-container>
+      }
+    </article>
+  </div>
+</div>
+<ng-template></ng-template>

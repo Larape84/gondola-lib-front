@@ -1,0 +1,73 @@
+:host ::ng-deep .gondola-calendar {
+  .p-datepicker:not(.p-datepicker-inline) {
+    background: transparent;
+    border: 0 none;
+    box-shadow: none;
+  }
+
+  .p-inputtext {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-size: 1rem;
+    color: var(--p-inputtext-color);
+    background: var(--p-inputtext-background);
+    padding-block: var(--p-inputtext-padding-y);
+    padding-inline: var(--p-inputtext-padding-x);
+    border: 0px solid var(--p-inputtext-border-color);
+    transition: background var(--p-inputtext-transition-duration),
+      color var(--p-inputtext-transition-duration),
+      border-color var(--p-inputtext-transition-duration),
+      outline-color var(--p-inputtext-transition-duration),
+      box-shadow var(--p-inputtext-transition-duration);
+    appearance: none;
+    border-radius: 24px;
+    outline-color: transparent;
+    box-shadow: 3px 3px 6px 0px #c4c7d4 inset, -3px -3px 6px 0px #ffffff inset;
+
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    color: #979797;
+  }
+
+  .p-datepicker-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--p-datepicker-title-gap);
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 14px;
+    color: #712cee;
+  }
+
+  .p-datepicker-day-selected {
+    background: #712cee;
+    color: #fff;
+  }
+
+  .p-datepicker:not(.p-disabled)
+    table
+    td
+    span:not(.p-highlight):not(.p-disabled):hover {
+    background: #712cee;
+  }
+
+  .p-inputtext:enabled:focus {
+    border-color: var(--p-inputtext-border-color);
+    box-shadow: 3px 3px 6px 0px #c4c7d4 inset, -3px -3px 6px 0px #ffffff inset;
+    outline: var(--p-inputtext-focus-ring-width)
+      var(--p-inputtext-focus-ring-style) var(--p-inputtext-focus-ring-color);
+    outline-offset: var(--p-inputtext-focus-ring-offset);
+  }
+
+  .p-datepicker-day-selected-range {
+    background: var(--p-datepicker-date-range-selected-background);
+    color: var(--p-datepicker-date-range-selected-color);
+  }
+
+  .p-datepicker-day-selected-range {
+    background: #cdb4f9;
+    color: #000;
+  }
+}

@@ -9,9 +9,10 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "target": "es2020",
+    "baseUrl": ".",
     "paths": {
-      "primeng/*": ["node_modules/primeng-v16/*"],
-      "primeng/api": ["node_modules/primeng-v16/api"]
+      "primeng/*": ["../../../node_modules/primeng-v16/*"],
+      "primeng/api": ["../../../node_modules/primeng-v16/api"]
     }
   },
   "exclude": ["src/**/*.spec.ts", "jest.config.ts", "src/**/*.test.ts"],

@@ -1,0 +1,29 @@
+:host ::ng-deep .gondola-inputtext {
+  .p-inputtext {
+    padding: 0.5rem 0.5rem;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    height: 100%;
+    box-shadow: 3px 3px 6px 0px #c4c7d480 inset, -3px -3px 6px 0px #ffffff inset;
+    border-radius: 24px;
+    background: #ffffff;
+
+  }
+
+  .p-inputtext:enabled:hover {
+    border-color: #712cee;
+  }
+
+  .p-inputtext:enabled:focus {
+    border-color: #712cee;
+    box-shadow: 3px 3px 6px 0px #c4c7d480 inset, -3px -3px 6px 0px #ffffff inset;
+    outline: var(--p-inputtext-focus-ring-width)
+      var(--p-inputtext-focus-ring-style) var(--p-inputtext-focus-ring-color);
+    outline-offset: var(--p-inputtext-focus-ring-offset);
+  }
+}
+input{
+  height: 2rem;
+}

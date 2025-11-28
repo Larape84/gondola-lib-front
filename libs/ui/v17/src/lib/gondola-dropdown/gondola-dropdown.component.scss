@@ -1,0 +1,71 @@
+.gondola-dropdown {
+  .p-dropdown-label.p-placeholder {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    color: #202224;
+  }
+  .p-dropdown {
+    display: inline-flex;
+    gap: 0.5rem;
+    cursor: pointer;
+    position: relative;
+
+    border-radius: 24px;
+
+    box-shadow:
+      0px 2px 0px 0px #ffffff inset,
+      2px 2px 2px 0px #0000001f;
+  }
+
+  .p-dropdown-option {
+    cursor: pointer;
+    font-weight: normal;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    color: #202224;
+  }
+
+  .p-dropdown-panel {
+    background: #fff;
+    color: #495057;
+    border: 0 none;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    width: max-content;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    margin: 0;
+    padding: 0.75rem 1.25rem;
+    border: 0 none;
+    color: #495057;
+    background: transparent;
+    transition: box-shadow 0.2s;
+    border-radius: 0;
+    text-wrap: auto !important;
+  }
+
+  .p-inputtext:enabled:hover {
+    border: 0px solid #712cee;
+  }
+
+  .p-inputtext:enabled:focus {
+    border: 0px solid #712cee;
+  }
+
+  .p-dropdown-item {
+    white-space: normal !important;
+    text-wrap: auto;
+  }
+
+  .p-dropdown.p-dropdown-clearable .p-dropdown-label {
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,23 @@
+<div class="gondola-inputfile">
+  <input
+    #fileInput
+    [multiple]="multiple()"
+    type="file"
+    [disabled]="disabled()"
+    accept="{{ acceptFormats() }}"
+    class="file-input"
+    [style]="currentFiles && currentFiles.length > 0 ? {} : { width: '100%' }"
+    id="fileInput"
+    (change)="onFileSelected($event)"
+    (input)="onFileSelected($event)"
+  />
+  <div class="file-label">
+    <article class="label-file">
+      <i class="pi pi-upload"></i>
+      <label for="fileInput">{{ labelCurrent }}</label>
+    </article>
+    @if (currentFiles && currentFiles.length>0) {
+    <i class="pi pi-times" (click)="clearFiles()"></i>
+    }
+  </div>
+</div>

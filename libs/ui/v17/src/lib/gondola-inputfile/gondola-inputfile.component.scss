@@ -1,0 +1,63 @@
+.gondola-inputfile {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: calc(100% - 1.6rem);
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-label {
+  padding: 0.5rem;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  line-height: 19.36px;
+  font-family: "Inter", sans-serif;
+  background-color: #f5f5fa;
+  border: 0px solid #cbd0dc;
+  color: #263238;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  box-shadow: -1px -1px 2px 0px #ffffff, 1px 1px 2px 0px #aaaacc80;
+}
+
+.label-file {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+:host ::ng-deep .gondola-inputfile {
+  .pi {
+    font-family: "primeicons";
+    color: #263238;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

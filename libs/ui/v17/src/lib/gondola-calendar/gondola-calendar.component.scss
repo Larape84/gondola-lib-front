@@ -1,0 +1,67 @@
+:host ::ng-deep .gondola-calendar {
+  .p-calendar:not(.p-calendar-inline) {
+    background: transparent;
+    border: 0 none;
+    box-shadow: none;
+  }
+
+  .p-inputtext {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-size: 1rem;
+
+    padding: 0.5rem;
+
+    appearance: none;
+    border-radius: 24px;
+    outline-color: transparent;
+    //box-shadow: 3px 3px 6px 0px #c4c7d4 inset, -3px -3px 6px 0px #ffffff inset;
+    box-shadow:
+      0px 2px 0px 0px #ffffff inset,
+      2px 2px 2px 0px #0000001f;
+
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    color: #202224;
+  }
+
+  .p-calendar-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 14px;
+    color: #712cee;
+  }
+
+  .p-calendar-day-selected {
+    background: #702cee5d;
+    color: #fff;
+  }
+
+  .p-calendar:not(.p-disabled)
+    table
+    td
+    span:not(.p-highlight):not(.p-disabled):hover {
+    background: #702cee6c;
+  }
+
+  .p-inputtext:enabled:focus {
+    box-shadow:
+      0px 2px 0px 0px #ffffff inset,
+      2px 2px 2px 0px #0000001f;
+    //box-shadow: 3px 3px 6px 0px #c4c7d4 inset, -3px -3px 6px 0px #ffffff inset;
+  }
+
+  /*.p-calendar-day-selected-range {
+        background: var(--p-calendar-date-range-selected-background);
+        color: var(--p-calendar-date-range-selected-color);
+      }*/
+
+  .p-calendar-day-selected-range {
+    background: #cdb4f9;
+    color: #000;
+  }
+}

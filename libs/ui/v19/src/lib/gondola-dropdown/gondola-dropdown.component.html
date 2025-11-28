@@ -1,0 +1,50 @@
+<div class="gondola-dropdown">
+  <p-select
+    [options]="optionList()"
+    [(ngModel)]="optionSelect"
+    [optionLabel]="optionLabel()"
+    [placeholder]="placeholder()"
+    [filter]="filter()"
+    [filterBy]="filterBy()"
+    [showClear]="showClear()"
+    class="w-full md:w-56"
+    (onChange)="onValueChange($event.value)">
+  >
+    @if (selectItemCustom) {
+    <ng-template #selectedItem let-selectedOption>
+      <ng-container
+        *ngTemplateOutlet="
+          selectItemCustom;
+          context: { $implicit: selectedOption }
+        "
+      ></ng-container>
+    </ng-template>
+    } @if (itemListCustom) {
+    <ng-template let-itemList #item>
+      <ng-container
+        *ngTemplateOutlet="itemListCustom; context: { $implicit: itemList }"
+      ></ng-container>
+    </ng-template>
+
+    } @if (itemListCustom) {
+    <ng-template let-itemList #item>
+      <ng-container
+        *ngTemplateOutlet="itemListCustom; context: { $implicit: itemList }"
+      ></ng-container>
+    </ng-template>
+    } @if (dropIconCustom) {
+    <ng-template #dropdownicon>
+      <ng-container *ngTemplateOutlet="dropIconCustom"></ng-container>
+    </ng-template>
+    } @if (headerCustom) {
+    <ng-template #header>
+      <ng-container *ngTemplateOutlet="headerCustom"></ng-container>
+    </ng-template>
+    } @if (footerCustom) {
+    <ng-template #footer>
+      <ng-container *ngTemplateOutlet="footerCustom"></ng-container>
+    </ng-template>
+
+    }
+  </p-select>
+</div>

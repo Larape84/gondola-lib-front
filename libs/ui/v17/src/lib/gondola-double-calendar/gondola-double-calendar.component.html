@@ -1,0 +1,85 @@
+<div class="gondola-double-calendar">
+  @if (floatLabel()) {
+    <article class="first-date-option">
+      <p-floatLabel>
+        <ng-container
+          *ngTemplateOutlet="
+            calendar;
+            context: {
+              $implicit: firstDate(),
+              currentDateOptions: firstDateOption(),
+              index: 0,
+            }
+          "
+        />
+        <label for="{{ firstDateOption().placeholder }}">{{
+          firstDateOption().placeholder
+        }}</label>
+      </p-floatLabel>
+    </article>
+
+    <article class="second-date-option">
+      <p-floatLabel>
+        <ng-container
+          *ngTemplateOutlet="
+            calendar;
+            context: {
+              $implicit: secondDate(),
+              currentDateOptions: secondDateOption(),
+              index: 1,
+            }
+          "
+        />
+        <label for="{{ secondDateOption().placeholder }}">{{
+          secondDateOption().placeholder
+        }}</label>
+      </p-floatLabel>
+    </article>
+  } @else {
+    <article class="first-date-option">
+      <ng-container
+        *ngTemplateOutlet="
+          calendar;
+          context: {
+            $implicit: firstDate(),
+            currentDateOptions: firstDateOption(),
+            index: 0,
+          }
+        "
+      />
+    </article>
+    <article class="second-date-option">
+      <ng-container
+        *ngTemplateOutlet="
+          calendar;
+          context: {
+            $implicit: secondDate(),
+            currentDateOptions: secondDateOption(),
+            index: 1,
+          }
+        "
+      />
+    </article>
+  }
+</div>
+
+<ng-template
+  #calendar
+  let-dateValue
+  let-currentDateOptions="currentDateOptions"
+  let-index="index"
+>
+  <p-calendar
+    [ngModel]="dateValue"
+    (ngModelChange)="validateFirstDateToSecondDate($event, index)"
+    [showClear]="currentDateOptions.showClear ?? false"
+    [readonlyInput]="currentDateOptions.readonlyInput ?? false"
+    [placeholder]="currentDateOptions.placeholder ?? ''"
+    [appendTo]="currentDateOptions.appendTo ?? null"
+    [showTime]="currentDateOptions.showTime ?? false"
+    [hourFormat]="currentDateOptions.formatHour ?? '12'"
+    [maxDate]="currentDateOptions.maxDate ?? undefined"
+    [minDate]="currentDateOptions.currentMinDate ?? undefined"
+    [disabled]="currentDateOptions.disabled ?? false"
+  />
+</ng-template>

@@ -1,0 +1,27 @@
+<div class="gondola-multiselect">
+  @if (floatLabel()) {
+    <p-floatLabel>
+      <ng-container *ngTemplateOutlet="multiselect"></ng-container>
+      <label for="{{ placeholder() }}">{{ placeholder() }}</label>
+    </p-floatLabel>
+  } @else {
+    <ng-container *ngTemplateOutlet="multiselect"></ng-container>
+  }
+</div>
+
+<ng-template #multiselect>
+  <p-multiSelect
+    [disabled]="disabled()"
+    [appendTo]="appendTo()"
+    [options]="optionList()"
+    [(ngModel)]="optionsSelect"
+    [optionLabel]="optionLabel()"
+    [placeholder]="placeholder()"
+    [virtualScroll]="virtualScroll()"
+    [virtualScrollItemSize]="virtualScrollItemSize()"
+    [filter]="filter()"
+    [filterBy]="filterBy()"
+    [showClear]="showClear()"
+    panelStyleClass="gondola-multiselect"
+  />
+</ng-template>

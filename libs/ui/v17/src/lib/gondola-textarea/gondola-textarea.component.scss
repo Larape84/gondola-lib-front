@@ -1,0 +1,26 @@
+:host ::ng-deep .gondola-textarea {
+  .p-inputtext {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-size: 1rem;
+
+    appearance: none;
+    border-radius: 24px;
+    outline-color: transparent;
+    box-shadow: 3px 3px 6px 0px #c4c7d4 inset, -3px -3px 6px 0px #ffffff inset;
+
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .p-inputtext:enabled:focus {
+    box-shadow: 3px 3px 6px 0px #c4c7d4 inset, -3px -3px 6px 0px #ffffff inset;
+  }
+
+  .p-inputtext:enabled:hover {
+    border-color: #712cee;
+    border-width: 0;
+  }
+}

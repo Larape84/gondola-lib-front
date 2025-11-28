@@ -8,7 +8,7 @@ import { GondolainputTextAreaDirective } from './gondola-input-textArea.directiv
 import { GondolaSteperDirective } from './gondola-steper.directive';
 import { GondolaTableColumnDirective } from './gondola-table-column.directive';
 
-const directives = [
+const directives_angular_17 = [
   GondolaTableColumnDirective,
   GondolaSteperDirective,
   GondolainputTextAreaDirective,
@@ -20,4 +20,14 @@ const directives = [
   ConditionalElementDirective,
 ];
 
-export default directives;
+export { GondolaTableColumnDirective };
+export { GondolaSteperDirective };
+export { GondolainputTextAreaDirective };
+export { GondolaInputTextDirective };
+export { GondolaInputSelectDirective };
+export { GondolaInputNumberDirective };
+export { GondolaInputFechaDirective };
+export { GondolaButtonRoundedDirective };
+export { ConditionalElementDirective };
+
+export const directives_angular = directives_angular_17;

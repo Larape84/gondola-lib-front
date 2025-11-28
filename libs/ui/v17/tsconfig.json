@@ -10,7 +10,8 @@
     "noFallthroughCasesInSwitch": true,
     "module": "preserve",
     "paths": {
-      "primeng/*": ["node_modules/primeng-v17/*"]
+      "@primeng-v17": ["../../../node_modules/primeng-v17"],
+      "@primeng-v17/*": ["../../../node_modules/primeng-v17/*"]
     }
   },
   "angularCompilerOptions": {

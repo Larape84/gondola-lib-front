@@ -1,0 +1,39 @@
+<div class="gondola-inputtext">
+  @if (floatLabel()) {
+    <p-floatLabel>
+      <ng-container *ngTemplateOutlet="inputtext"></ng-container>
+
+      <label for="{{ placeholder() }}">{{ placeholder() }}</label>
+    </p-floatLabel>
+  } @else {
+    <p-iconField iconPosition="left">
+      @if (leftIcon() !== "") {
+        <p-inputIcon>
+          <app-custom-icons
+            [name]="leftIcon()"
+            [color]="colorLeftIcon()"
+            [width]="'13px'"
+            [height]="'13px'"
+          />
+        </p-inputIcon>
+      }
+      <ng-container *ngTemplateOutlet="inputtext"></ng-container>
+    </p-iconField>
+  }
+
+  <ng-template #inputtext>
+    <input
+      [style]="leftIcon() !== '' ? { 'padding-left': '2rem' } : {}"
+      pTooltip="{{ tooltipText() }}"
+      [tooltipOptions]="tooltipOptions()"
+      type="text"
+      pInputText
+      [placeholder]="placeholder()"
+      [disabled]="disabled()"
+      [readOnly]="readOnly()"
+      [(ngModel)]="textValue"
+      (click)="clickEmit()"
+      (input)="inputEmit($event)"
+    />
+  </ng-template>
+</div>

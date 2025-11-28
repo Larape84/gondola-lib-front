@@ -1,4 +1,14 @@
-export * as primeng from 'primeng-v17';
 export * from './lib/shared-ui-components-v17/shared-ui-components-v17';
 export * from './lib/shared-directives/index';
-
+export * from './lib/custom-icons/custom-icons.component';
+export * from './lib/gondola-buttons/gondola-buttons.component';
+export * from './lib/gondola-calendar/gondola-calendar.component';
+export * from './lib/gondola-checkbox/gondola-checkbox.component';
+export * from './lib/gondola-double-calendar/gondola-double-calendar.component';
+export * from './lib/gondola-dropdown/gondola-dropdown.component';
+export * from './lib/gondola-inputfile/gondola-inputfile.component';
+export * from './lib/gondola-inputnumber/gondola-inputnumber.component';
+export * from './lib/gondola-inputtext/gondola-inputtext.component';
+export * from './lib/gondola-multiselect/gondola-multiselect.component';
+export * from './lib/gondola-textarea/gondola-textarea.component';
+export * from './lib/input-incremental-value/input-incremental-value.component';

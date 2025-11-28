@@ -1,0 +1,13 @@
+<div [ngClass]="direction">
+  <label *ngFor="let option of options" class="checkbox-option">
+   <div class="borde">
+     <input
+       class="checkbox"
+       type="checkbox"
+       [checked]="selectedValue === option"
+       (change)="selectValue(option)"
+     />
+   </div>
+    {{ option.name }}
+  </label>
+</div>
