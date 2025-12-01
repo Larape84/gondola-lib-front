@@ -19,9 +19,11 @@
           "path": "./apps/gondola-librery-front/webpack.config.js"
         },
         "assets": [
+          "apps/gondola-librery-front/src/assets",
           {
             "glob": "**/*",
-            "input": "apps/gondola-librery-front/public"
+            "input": "apps/gondola-librery-front/src/assets",
+            "output": "assets/"
           }
         ],
         "styles": ["apps/gondola-librery-front/src/styles.css"]

@@ -10,12 +10,12 @@
   "peerDependencies": {
     "@angular/common": "^19.0.0",
     "@angular/core": "^19.0.0",
-    "rxjs": "^7.0.0 || ^8.0.0"
-  },
-  "dependencies": {
-    "primeng": "^19.1.4",
+    "rxjs": "^7.0.0 || ^8.0.0",
+    "primeng-v19": "*",
     "primeicons": "^7.0.0"
   },
+  "dependencies": {},
+  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   },
@@ -25,5 +25,8 @@
     "components",
     "shared",
     "library"
+  ],
+  "sideEffects": [
+    "./styles/primeng-v19.css"
   ]
 }

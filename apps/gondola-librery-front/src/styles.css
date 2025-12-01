@@ -11,6 +11,9 @@
 
 /* This injects Tailwind's base styles and any base styles registered by plugins. */
 @tailwind base;
+@tailwind components;
+
+@tailwind utilities;
 
 /* This injects additional styles into Tailwind's base styles layer. */
 @layer base {
@@ -50,23 +53,3 @@
     font-size: 0.875rem;
   }
 }
-
-@tailwind components;
-
-@tailwind utilities;
-
-/* PrimeNG v16 Styles - Traditional theme system */
-@import 'primeng-v16/resources/themes/lara-light-blue/theme.css';
-@import 'primeng-v16/resources/primeng.min.css';
-
-@import 'primeng-v17/resources/themes/lara-light-blue/theme.css';
-@import 'primeng-v17/resources/primeng.css';
-
-/*
-  Note: PrimeNG v20 uses a new theming system (@primeuix/themes)
-  and doesn't require CSS imports. Styles are applied via provideAnimations()
-  and theme configuration in the Angular app config.
-*/
-
-/* PrimeIcons - Shared across all versions */
-@import 'primeicons/primeicons.css';

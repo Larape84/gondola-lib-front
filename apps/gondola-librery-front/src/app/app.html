@@ -23,7 +23,7 @@
     <button
       type="button"
       (click)="activeMicroFront(item)"
-      [ngClass]="item.active ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700' "
+      [ngClass]="getAngularButtonActive(item.value) ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700' "
       class="rounded-full cursor-pointer transition-all duration-400 border border-gray-200 px-3 py-1"
     >
       <span class="">{{item.value}}</span>
@@ -39,10 +39,9 @@
       </span>
       <hr class="w-full text-gray-500 my-0" />
 
-      <div
-        class="flex gap-2 flex-wrap mt-2"
-        *ngIf="getActiveItems().length > 0"
-      >
+      @if(getActiveItems().length > 0){
+
+      <div class="flex gap-2 flex-wrap mt-2">
         @for(item of getActiveItems(); track item.name){
         <button
           (click)="selectComponent(item)"
@@ -53,11 +52,15 @@
         </button>
         }
       </div>
-      <div class="mt-2" *ngIf="getActiveItems().length === 0">
+      } @if(getActiveItems().length === 0){
+
+      <div class="mt-2">
         <p class="text-sm text-gray-500 italic">
           No hay elementos disponibles para esta categoría.
         </p>
       </div>
+
+      }
     </div>
 
     <div
@@ -118,7 +121,9 @@
         </div>
         } @else {
         <!-- Información detallada del elemento seleccionado -->
-        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+        <div
+          class="bg-blue-50 p-4 rounded-lg border border-blue-200 max-h-100 overflow-auto"
+        >
           <h3 class="text-xl font-bold text-blue-800 mb-3">
             {{selectedItem()!.name}}
           </h3>
@@ -189,7 +194,10 @@
           <h4 class="font-semibold text-gray-800 mb-2">
             Vista de implementación:
           </h4>
-          <div class="bg-white p-4 border rounded-lg">
+          <div
+            class="bg-white p-4 border rounded-lg"
+            [attr.data-prime-version]="activeAngularVersion().split(' ')[1]"
+          >
             <ng-container
               *ngComponentOutlet="selectedItem()!.component"
             ></ng-container>

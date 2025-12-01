@@ -1,4 +1,6 @@
-export * from './lib/shared-ui-components-v17/shared-ui-components-v17';
+import './lib/styles';
+
+// Export components and directives
 export * from './lib/shared-directives/index';
 export * from './lib/custom-icons/custom-icons.component';
 export * from './lib/gondola-buttons/gondola-buttons.component';

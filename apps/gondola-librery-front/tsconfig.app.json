@@ -2,7 +2,26 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": []
+    "types": [],
+    "paths": {
+      "@gondola-librery-front/shared-ui-components-v16": ["libs/ui/v16/dist"],
+      "@gondola-librery-front/shared-ui-components-v17": ["libs/ui/v17/dist"],
+      "@gondola-librery-front/shared-ui-components-v18": ["libs/ui/v18/dist"],
+      "@gondola-librery-front/shared-ui-components-v19": ["libs/ui/v19/dist"],
+      "@gondola-librery-front/shared-ui-components-v20": ["libs/ui/v20/dist"],
+
+      "@primeng-v16": ["node_modules/primeng-v16"],
+      "@primeng-v16/*": ["node_modules/primeng-v16/*"],
+
+      "@primeng-v17": ["node_modules/primeng-v17"],
+      "@primeng-v17/*": ["node_modules/primeng-v17/*"],
+
+      "@primeng-v18": ["node_modules/primeng-v18"],
+      "@primeng-v18/*": ["node_modules/primeng-v18/*"],
+
+      "@primeng-v19": ["node_modules/primeng-v19"],
+      "@primeng-v19/*": ["node_modules/primeng-v19/*"]
+    }
   },
   "include": ["src/**/*.ts"],
   "exclude": [

@@ -25,5 +25,8 @@
     "components",
     "shared",
     "library"
+  ],
+  "sideEffects": [
+    "./styles/primeng-v17.css"
   ]
 }
